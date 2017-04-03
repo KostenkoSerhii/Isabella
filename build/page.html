@@ -14,10 +14,31 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p> <svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
-      <li>Item1</li>
-      <li>Item2</li> --> </div>
+      <header class="header" style="background-image: url('img/header-bg.jpg');">
+        <!-- begin container -->
+        <div class="container">
+          <!-- begin logo -->
+          <div class="header__logo logo"> <img src="img/logo.png"> </div>
+          <!-- begin header__lans -->
+          <div class="header__lans langs">
+            <ul>
+              <li class="langs__item">
+                <div class="langs__img  langs__img-rus"></div><a href="#"><span>Rus</span></a> </li>
+              <li class="langs__item">
+                <div class="langs__img  langs__img-ger"></div><a href="#"><span>ger</span></a> </li>
+              <li class="langs__item">
+                <div class="langs__img  langs__img-ing"></div><a href="#"><span>ing</span></a> </li>
+            </ul>
+          </div>
+          <!-- end header__lans -->
+          <!-- end logo -->
+        </div>
+        <!-- end container -->
+      </header>
+      <!--begin main-content-->
+      <div class="main-content"> </div>
+      <!--end main-content-->
+    </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
