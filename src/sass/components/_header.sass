@@ -83,11 +83,23 @@
 			left: 50%
 			transform: translateX(-50%)
 			bottom: -28px
-			+s(menu)
+			background: url("../img/menu.png")
+			background-repeat: no-repeat
+			height: 67px
 			z-index: -1
+			width: 1014px
+			+r(1039)
+				display: none
+				
 	&__menu-item
 		padding: 0px 28px
 		border-right: 1px solid #42a9f3
+		+r(1039)
+			padding: 0 20px
+		+r(880)
+			padding: 0 15px
+		+r(800)
+			padding: 0 10px
 		&:last-of-type
 			border-right: none
 	&__menu-link
