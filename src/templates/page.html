@@ -6,13 +6,17 @@ title: Index page
 {% block content %}
 
 {% include "partials/_header.html" %}
-<!--begin main-content-->
-<div class="main-content">
-{% include "partials/_sidebar.html" %}
-{% include "partials/_home-content.html" %}
-{% include "partials/_baners.html" %}
+<!--begin main-content -->
+<div class="main-content ">
+	<!--begin container-->
+	<div class="container main-content__container">
+		{% include "partials/_sidebar.html" %}
+		{% include "partials/_home-content.html" %}
+		{% include "partials/_baners.html" %}
+	</div>
+	<!--end container-->
 </div>
-<!--end main-content-->
+<!--end main-content -->
 
 {% include "partials/_footer.html" %}
 
