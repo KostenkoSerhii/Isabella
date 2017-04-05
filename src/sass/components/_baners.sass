@@ -1,5 +1,9 @@
 .baners
 	margin-top: 10px
+	grid-column: -2
+	grid-row: 1
+	//+r(991)
+	//	grid-area: -2 / 1/ end / end
 .baner
 	width: 183px
 	height: 210px
@@ -7,9 +11,14 @@
 	display: block
 	&:last-of-type
 		margin-bottom: 0
+	+r(991)
+		width: 140px
+		height: 160px
 	&--big
 		height: 240px
+		+r(991)
+			height: 190px
 	img
 		width: 100%
 		height: 100%
-		object-fit: cover
+		object-fit: contain
