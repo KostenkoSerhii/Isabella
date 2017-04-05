@@ -1,6 +1,8 @@
 .footer
-	padding-top: 23px
+	//padding-top: 23px
+	padding-top: 26px
 	position: relative
+	padding-bottom: 20px
 	&:before
 		content: ''
 		position: absolute
@@ -11,18 +13,31 @@
 		background: url(../img/wawes.png)
 		background-repeat: repeat
 	&__container
-		grid-template-columns: 103px 1fr 330px
+		grid-template-columns: 106px 1fr 330px
+		grid-column-gap: 43px
 		align-items: center
+		+r(991)
+			grid-template-columns: 1fr  1fr 
 	&__logo
 		width: 103px
 		height: 43px
+		margin-top: 4px
+		+r(767)
+			margin-left: auto
+			margin-right: auto
 		img
 			width: 100%
 			height: 100%
 			object-fit: contain
+	&__menu-wrapper
+
 	&__menu
 		display: grid
-		grid-template-columns: min-content min-content min-content min-content
+		grid-template-columns: repeat(3, 1fr) min-content
+		//grid-template-columns: repeat(4, 1fr)
+		grid-row-gap: 10px
+		+r(991)
+			display: none
 	&__menu-item
 		a
 			text-transform: uppercase
@@ -33,3 +48,15 @@
 			transition: all .2s
 			&:hover
 				border-bottom-color: transparent
+	&__phones
+		padding-top: 10px
+		justify-self: end
+		font-size: 0
+		+r(767)
+			text-align: center
+	&__phone
+		&:last-of-type
+			margin-left: 48px
+		+r(400)
+			&:last-of-type
+				margin-left: 10px

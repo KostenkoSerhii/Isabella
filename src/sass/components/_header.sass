@@ -7,8 +7,9 @@
 	+r(767)
 		padding-top: 10px
 		padding-bottom: 10px
+		margin-bottom: 20px
 	&__container
-		grid-template-columns: 150px 1fr 126px
+		grid-template-columns: 150px  1fr 126px
 		align-items: center
 		//justify-content: stretch
 		+r(767)
@@ -25,14 +26,9 @@
 			height: 100%
 			object-fit: contain
 	&__lans
-		margin-left: 58px
-		+r(850)
-			margin-left: 15px
 		+r(767)
-			margin-left: 0
 			margin-right: 20px
-		+r(549)
-			margin-right: 0
+			vertical-align: middle
 	&__back-btn
 		&:first-of-type
 			margin-bottom: 11px
@@ -42,20 +38,22 @@
 		display: inline-grid
 		grid-template-columns: 86px 1fr
 		align-items: center
+		padding-left: 58px
+		+r(850)
+			padding-left: 15px
 		+r(767)
 			display: block
 			margin-top: 20px
 			margin-bottom: 20px
+			padding-left: 0
+			+vertical
 	&__phones
-		text-align: right
-		padding-right: 22px
+		justify-self: end
+		padding-right: 26px
 		+r(767)
 			display: inline-block
-			vertical-align: top
-			margin-top: 24px
-		+r(549)
-			display: block
-			text-align: center
+			vertical-align: middle
+			padding-right: 0
 	&__phone
 		margin-right: 47px
 		+r(850)
@@ -65,6 +63,30 @@
 		+r(549)
 			margin: 10px auto!important
 			display: block
+	.menu-wrapper
+		position: relative
+		bottom: -36px
+		+r(767)
+			display: none	
+			bottom: 0
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 21
+		&__bg
+			position: absolute
+			content: ''
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -28px
+			background: url("../img/menu.png")
+			background-repeat: no-repeat
+			height: 67px
+			z-index: 1
+			width: 1014px
+			+r(1039)
+				display: none	
 	&__menu
 		background-color: #888
 		background-image: linear-gradient(to top, #0770db 0%, #00a2ff 100%)
@@ -75,21 +97,11 @@
 		grid-template-columns: min-content  min-content min-content min-content min-content min-content min-content
 		padding: 7px 0px
 		position: relative
-		bottom: -36px
-		box-shadow: 0 5px 18px rgba(1, 152, 247, 0.56)
-		&:before
-			position: absolute
-			content: ''
-			left: 50%
-			transform: translateX(-50%)
-			bottom: -28px
-			background: url("../img/menu.png")
-			background-repeat: no-repeat
-			height: 67px
-			z-index: -1
-			width: 1014px
-			+r(1039)
-				display: none		
+		z-index: 2
+		+r(767)
+			display: block
+			border-radius: 0
+			text-align: center
 	&__menu-item
 		padding: 0px 28px
 		border-right: 1px solid #42a9f3
@@ -99,6 +111,9 @@
 			padding: 0 15px
 		+r(800)
 			padding: 0 10px
+		+r(767)
+			border-right: none
+			padding: 5px
 		&:last-of-type
 			border-right: none
 	&__menu-link
@@ -111,7 +126,50 @@
 		transition: all .3s
 		&:hover
 			border-bottom-color: transparent
-
-
+.menu-btn
+	display: none
+	+r(767)
+		display: block
+		position: fixed
+		right: 	15px
+		top: 25px
+		transform: translateY(-50%)
+		width: 28px
+		height: 20px
+		overflow: visible
+		z-index: 22
+		&:before, &:after
+			transition: all .3s
+			content: ''
+			position: absolute
+			height: 3px
+			width: 28px
+			background: #000
+			left: 0
+		&:before
+			top: 0px
+			transform-origin: top left
+		&:after
+			bottom: 0px
+			transform-origin: bottom left
+		div
+			height: 3px
+			width: 28px
+			z-index: 2
+			background: #000
+			position: absolute
+			top: 50%
+			margin-top: -2px
+			transition: all .2s
+.menu-btn-is-active
+	+r(767)
+		div
+			opacity: 0
+		&:before, &:after
+			width: 26px
+		&:before
+			transform: translateX(6px) rotate(45deg)
+		&:after
+			transform: translateX(6px) rotate(-45deg)
 
 	

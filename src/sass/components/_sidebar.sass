@@ -6,6 +6,9 @@
 	background-color: #e8f7fe
 	border-radius: 4px
 	padding: 14px
+	+r(767)
+		text-align: center
+		margin-bottom: 20px
 	&__item
 		margin-bottom: 14px
 		padding: 5px 5px 12px
@@ -15,6 +18,11 @@
 		text-align: center
 		&:last-of-type
 			margin-bottom: 0
+		+r(767)
+			display: inline-block
+			margin: 5px
+			&:last-of-type
+				margin: 5px
 	&__link
 		font-size: 12px
 		color: $black-lightnes
